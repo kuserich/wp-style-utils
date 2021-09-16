@@ -9,7 +9,7 @@
 	"labels": [ "type: dependencies", "skip-changelog" ],
 	"packageRules": [
 		{
-			"updateTypes": [ "minor", "patch", "pin", "digest" ],
+			"updateTypes": [ "major", "minor", "patch", "pin", "digest" ],
 			"automerge": true,
 			"requiredStatusChecks": null
 		}
