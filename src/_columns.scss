@@ -1,0 +1,14 @@
+@import "./flexbox";
+@for $i from 1 through 6 {
+	.sixa-#{$i}-columns {
+		--columns-gap: 30px;
+		gap: var(--columns-gap);
+		@include box(wrap);
+
+		> * {
+
+			$prefix: calc(var(--gap) * calc(#{$i} - 1) / #{$i});
+			width: calc(calc(100% / #{$i}) - #{$prefix});
+		}
+	}
+}
