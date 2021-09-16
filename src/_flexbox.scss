@@ -1,0 +1,43 @@
+// Example @include box( vertical, wrap )
+// Result display: flex;
+//                 flex-direction: column;
+//                 flex-wrap: wrap;
+@mixin box( $props... ) {
+	display: flex;
+
+	@for $i from 1 through length($props) {
+		$prop: nth($props, $i);
+
+		@if $prop == vertical {
+			flex-direction: column;
+		} @else if $prop == horizontal {
+			flex-direction: row;
+		} @else if $prop == wrap {
+			flex-wrap: wrap;
+		} @else if $prop == nowrap {
+			flex-wrap: nowrap;
+		} @else if $prop == top {
+			align-items: flex-start;
+		} @else if $prop == bottom {
+			align-items: flex-end;
+		} @else if $prop == stretch {
+			align-items: stretch;
+		} @else if $prop == middle {
+			align-items: center;
+		} @else if $prop == left {
+			justify-content: flex-start;
+		} @else if $prop == right {
+			justify-content: flex-end;
+		} @else if $prop == center {
+			justify-content: center;
+		} @else if $prop == space-around {
+			justify-content: space-around;
+		} @else if $prop == space-between {
+			justify-content: space-between;
+		} @else if $prop == space-evenly {
+			justify-content: space-evenly;
+		} @else if $prop == inline {
+			display: inline-flex;
+		}
+	}
+}
