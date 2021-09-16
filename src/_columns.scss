@@ -1,14 +1,16 @@
+@use "sass:math";
 @import "./flexbox";
+
 @for $i from 1 through 6 {
 	.sixa-#{$i}-columns {
+		@include box(wrap);
 		--columns-gap: 30px;
 		gap: var(--columns-gap);
-		@include box(wrap);
 
 		> * {
 
-			$prefix: calc(var(--gap) * calc(#{$i} - 1) / #{$i});
-			width: calc(calc(100% / #{$i}) - #{$prefix});
+			$subtrahend: calc(var(--columns-gap) * #{math.div(($i - 1), $i)});
+			width: calc(#{math.div(100%, $i)} - #{$subtrahend});
 		}
 	}
 }
