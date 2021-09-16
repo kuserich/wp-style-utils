@@ -1,6 +1,6 @@
 {
 	"name": "@sixach/wp-style-utils",
-	"version": "1.0.0",
+	"version": "1.0.0-beta.1",
 	"description": "A collection of SCSS utilities and variables.",
 	"keywords": [
 		"gutenberg",
@@ -24,14 +24,11 @@
 	"main": "build/index.js",
 	"module": "build/index.js",
 	"scripts": {
-		"dev": "wp-scripts start",
-		"build": "wp-scripts build",
+		"check-engines": "wp-scripts check-engines",
+		"check-licenses": "wp-scripts check-licenses",
 		"format": "wp-scripts format",
 		"lint:css": "wp-scripts lint-style",
 		"lint:css-fix": "wp-scripts lint-style --fix",
-		"lint:js": "wp-scripts lint-js",
-		"lint:js-fix": "wp-scripts lint-js --fix",
-		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"packages-update": "wp-scripts packages-update",
 		"prepare": "husky install"
 	},
@@ -48,6 +45,14 @@
 		"@wordpress/base-styles": "^4.0.0",
 		"@wordpress/scripts": "^18.0.1",
 		"husky": "^7.0.2",
-		"lint-staged": "^11.1.2"
+		"lint-staged": "11.1.2",
+		"prettier": "npm:wp-prettier@2.2.1-beta-1"
+	},
+	"engines": {
+		"node": ">=16",
+		"npm": ">=7.0"
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com/"
 	}
 }
