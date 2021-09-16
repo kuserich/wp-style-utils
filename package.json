@@ -1,0 +1,53 @@
+{
+	"name": "@sixach/wp-style-utils",
+	"version": "1.0.0",
+	"description": "A collection of SCSS utilities and variables.",
+	"keywords": [
+		"gutenberg",
+		"utils",
+		"style",
+		"sass",
+		"scss",
+		"css"
+	],
+	"homepage": "https://github.com/sixach/wp-style-utils#readme",
+	"bugs": {
+		"url": "https://github.com/sixach/wp-style-utils/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sixach/wp-style-utils.git"
+	},
+	"license": "GPL-3.0-or-later",
+	"author": "sixa AG",
+	"sideEffects": false,
+	"main": "build/index.js",
+	"module": "build/index.js",
+	"scripts": {
+		"dev": "wp-scripts start",
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:css-fix": "wp-scripts lint-style --fix",
+		"lint:js": "wp-scripts lint-js",
+		"lint:js-fix": "wp-scripts lint-js --fix",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"packages-update": "wp-scripts packages-update",
+		"prepare": "husky install"
+	},
+	"lint-staged": {
+		"*.css": [
+			"npm run lint:css"
+		],
+		"*.{js,ts,tsx}": [
+			"npm run lint:js",
+			"npm run format"
+		]
+	},
+	"devDependencies": {
+		"@wordpress/base-styles": "^4.0.0",
+		"@wordpress/scripts": "^18.0.1",
+		"husky": "^7.0.2",
+		"lint-staged": "^11.1.2"
+	}
+}
