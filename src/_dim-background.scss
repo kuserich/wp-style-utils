@@ -1,0 +1,29 @@
+@use "sass:math";
+
+.has-background-dim {
+
+	&:not(.has-background-gradient) {
+
+		&::before {
+			background-color: inherit;
+			z-index: 1;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			content: "";
+		}
+	}
+
+	&::before {
+		opacity: 0.5;
+	}
+
+	@for $i from 1 through 10 {
+
+		&-#{$i}0::before {
+			opacity: #{math.div($i, 10)};
+		}
+	}
+}
