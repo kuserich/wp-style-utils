@@ -53,3 +53,22 @@ dist/
 
 # IDE configuration files
 .idea
+
+# Husky configuration files
+.husky
+
+# Documentation
+docs/
+
+# .ignore files and development configs
+.editorconfig
+.eslintignore
+.gitattributes
+.prettierignore
+.prettierrc.js
+babel.config.js
+renovate.json
+package-lock.json
+
+# Source files
+src/
