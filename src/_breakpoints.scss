@@ -1,0 +1,75 @@
+@import "~@wordpress/base-styles/breakpoints";
+
+@mixin mobile-only() {
+
+	@media (max-width: #{$break-medium - 1}) {
+		@content;
+	}
+}
+
+@mixin tablet() {
+
+	@media (min-width: #{$break-medium}) {
+		@content;
+	}
+}
+
+@mixin tablet-only() {
+
+	@media (min-width: #{$break-medium}) and (max-width: #{$break-large - 1}) {
+		@content;
+	}
+}
+
+@mixin until-tablet {
+	@media (max-width: #{$break-large - 1}) {
+		@content;
+	}
+}
+
+@mixin desktop() {
+
+	@media (min-width: #{$break-large}) {
+		@content;
+	}
+}
+
+@mixin desktop-only() {
+
+	@media (min-width: #{$break-large}) and (max-width: #{$break-wide - 1}) {
+		@content;
+	}
+}
+
+@mixin until-desktop {
+	@media (max-width: #{$break-wide - 1}) {
+		@content;
+	}
+}
+
+@mixin widescreen() {
+
+	@media (min-width: #{$break-wide}) {
+		@content;
+	}
+}
+
+@mixin widescreen-only() {
+
+	@media (min-width: #{$break-wide}) and (max-width: #{$break-huge - 1}) {
+		@content;
+	}
+}
+
+@mixin until-widescreen {
+	@media (max-width: #{$break-huge - 1}) {
+		@content;
+	}
+}
+
+@mixin ultra-widescreen-only() {
+
+	@media (min-width: #{$break-huge}) {
+		@content;
+	}
+}
