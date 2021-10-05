@@ -1,0 +1,20 @@
+@use "sass:math";
+@import "./flexbox";
+
+.woocommerce {
+	ul.products {
+		@for $i from 1 through 6 {
+			&.columns-#{$i} {
+				@include box(wrap);
+				--products-columns-gap: 30px;
+				gap: var(--products-columns-gap);
+
+				li.product {
+
+					$subtrahend: calc(var(--products-columns-gap) * #{math.div(($i - 1), $i)});
+					width: calc(#{math.div(100%, $i)} - #{$subtrahend});
+				}
+			}
+		}
+	}
+}
