@@ -44,7 +44,7 @@
 	"devDependencies": {
 		"@wordpress/scripts": "18.0.1",
 		"husky": "^7.0.2",
-		"lint-staged": "11.1.2",
+		"lint-staged": "11.2.0",
 		"prettier": "npm:wp-prettier@2.2.1-beta-1"
 	},
 	"peerDependencies": {
