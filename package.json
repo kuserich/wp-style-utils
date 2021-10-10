@@ -1,6 +1,6 @@
 {
 	"name": "@sixach/wp-style-utils",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "A collection of SCSS utilities and variables.",
 	"keywords": [
 		"gutenberg",
@@ -42,13 +42,13 @@
 		]
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "18.0.1",
+		"@wordpress/scripts": "^18.0.1",
 		"husky": "^7.0.2",
 		"lint-staged": "11.2.0",
 		"prettier": "npm:wp-prettier@2.2.1-beta-1"
 	},
 	"peerDependencies": {
-	    "@wordpress/base-styles": "4.x"
+		"@wordpress/base-styles": "4.x"
 	},
 	"engines": {
 		"node": ">=16",
