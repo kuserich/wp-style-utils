@@ -7,7 +7,7 @@ This packages includes a collection of SCSS utilities and variables.
 Install the module:
 
 ```bash
-npm install @sixach/wp-style-utils --save-dev
+npm install @sixa/wp-style-utils --save-dev
 ```
 
 ## How to use
@@ -17,7 +17,7 @@ npm install @sixach/wp-style-utils --save-dev
 You can import the following SCSS files:
 
 ```scss
-@import '@sixach/wp-style-utils/src/breakpoints';
-@import '@sixach/wp-style-utils/src/columns';
-@import '@sixach/wp-style-utils/src/flexbox';
+@import '@sixa/wp-style-utils/src/breakpoints';
+@import '@sixa/wp-style-utils/src/columns';
+@import '@sixa/wp-style-utils/src/flexbox';
 ```
