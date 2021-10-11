@@ -21,8 +21,6 @@
 	"license": "GPL-3.0-or-later",
 	"author": "sixa AG",
 	"sideEffects": false,
-	"main": "build/index.js",
-	"module": "build/index.js",
 	"scripts": {
 		"check-engines": "wp-scripts check-engines",
 		"check-licenses": "wp-scripts check-licenses",
