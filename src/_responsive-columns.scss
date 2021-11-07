@@ -1,0 +1,46 @@
+@use "sass:math";
+@import "./flexbox";
+@import "./breakpoints";
+
+.sixa-columns {
+
+	@include box(wrap);
+	gap: var(--columns-gap);
+}
+
+@each $device in (widescreen, laptop, tablet, mobile) {
+
+	@for $number from 1 through 6 {
+		.sixa-columns-#{$number}-#{$device} {
+
+			> * {
+
+				@if $device == widescreen {
+
+					@include widescreen {
+						$subtrahend: calc(var(--columns-gap) * #{math.div(($number - 1), $number)});
+						width: calc(#{math.div(100%, $number)} - #{$subtrahend});
+					}
+				} @else if $device == laptop {
+
+					@include desktop-only {
+						$subtrahend: calc(var(--columns-gap) * #{math.div(($number - 1), $number)});
+						width: calc(#{math.div(100%, $number)} - #{$subtrahend});
+					}
+				} @else if $device == tablet {
+
+					@include tablet-only {
+						$subtrahend: calc(var(--columns-gap) * #{math.div(($number - 1), $number)});
+						width: calc(#{math.div(100%, $number)} - #{$subtrahend});
+					}
+				} @else if $device == mobile {
+
+					@include mobile-only {
+						$subtrahend: calc(var(--columns-gap) * #{math.div(($number - 1), $number)});
+						width: calc(#{math.div(100%, $number)} - #{$subtrahend});
+					}
+				}
+			}
+		}
+	}
+}
