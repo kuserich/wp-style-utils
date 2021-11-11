@@ -22,8 +22,8 @@ jobs:
             - name: Install Node Dependencies
               run: npm install
 
-    eslint:
-        name: Lint JavaScript
+    stylelint:
+        name: Lint CSS
         needs: Setup
         runs-on: ubuntu-latest
         steps:
@@ -39,6 +39,5 @@ jobs:
                       ${{ runner.OS }}-
             - name: Install Node Dependencies
               run: npm install
-            - if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository }}
-              name: Run ESLint
-              run: npm run lint:js
+            - name: Lint CSS
+              run: npm run lint:css
