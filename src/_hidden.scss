@@ -1,0 +1,27 @@
+// Example @include hidden( disappear )
+@mixin hidden( $state: disappear ) {
+	@if $state == disappear {
+		display: none !important;
+		visibility: hidden;
+	} @else if $state == invisible {
+		visibility: hidden;
+	} @else if $state == visually {
+		border: none;
+		clip: rect(1px, 1px, 1px, 1px);
+		clip-path: inset(50%);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		padding: 0;
+		position: absolute;
+		width: 1px;
+		word-wrap: normal;
+
+		&:active,
+		&:focus {
+			display: table;
+			position: static;
+			clear: both;
+		}
+	}
+}
