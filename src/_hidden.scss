@@ -1,7 +1,7 @@
 // Example @include hidden( disappear )
 @mixin hidden( $state: disappear ) {
 	@if $state == disappear {
-		display: none !important;
+		display: none;
 		visibility: hidden;
 	} @else if $state == invisible {
 		visibility: hidden;
