@@ -1,0 +1,11 @@
+$prefix: sixa;
+
+@keyframes #{$prefix}Spin {
+	0% {
+		transform: translateZ(0) rotate(0deg);
+	}
+
+	100% {
+		transform: translateZ(0) rotate(360deg);
+	}
+}
