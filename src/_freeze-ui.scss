@@ -1,0 +1,47 @@
+@import "./keyframes/spin";
+$prefix: sixa;
+
+.freeze-ui {
+	background-color: #fff;
+	height: 100%;
+	left: 0;
+	opacity: 0.8;
+	position: fixed;
+	top: 0;
+	transition: opacity 0.25s;
+	width: 100%;
+	z-index: 999999999;
+
+	&.is-unfreezing {
+		opacity: 0;
+	}
+
+	&::before {
+		animation: #{$prefix}Spin 0.75s infinite ease-in-out;
+		border: 2px solid #228ae6;
+		border-top-color: transparent;
+		border-radius: 50%;
+		content: "";
+		display: block;
+		height: 150px;
+		left: calc(50% - 75px);
+		position: absolute;
+		top: calc(50% - 75px);
+		width: 150px;
+		will-change: transform;
+	}
+
+	&::after {
+		color: #343a40;
+		content: attr(data-text);
+		display: block;
+		font-size: 20px;
+		left: 50%;
+		max-width: 125px;
+		position: absolute;
+		text-align: center;
+		text-transform: uppercase;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
