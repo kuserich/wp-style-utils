@@ -63,6 +63,7 @@ docs/
 # .ignore files and development configs
 .editorconfig
 .eslintignore
+.github
 .gitattributes
 .prettierignore
 .prettierrc.js
