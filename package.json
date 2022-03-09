@@ -47,7 +47,7 @@
 		"@wordpress/base-styles": "4.1.1"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "22.0.1",
+		"@wordpress/scripts": "22.1.0",
 		"husky": "7.0.4",
 		"lint-staged": "12.3.5",
 		"prettier": "npm:wp-prettier@2.2.1-beta-1"
