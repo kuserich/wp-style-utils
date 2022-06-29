@@ -49,7 +49,7 @@
 	"devDependencies": {
 		"@wordpress/scripts": "23.3.0",
 		"husky": "7.0.4",
-		"lint-staged": "13.0.2",
+		"lint-staged": "13.0.3",
 		"prettier": "npm:wp-prettier@2.6.2"
 	},
 	"publishConfig": {
